@@ -1,0 +1,12 @@
+.display{
+    border: 2px solid black;
+    position: absolute;
+    top: 7vh;
+    width: 275px;
+    height: 228px;
+    background-image: url("https://play-lh.googleusercontent.com/nzertzGfuWdtiZzAfiXV1mFvNMU2jOYKavNEgvmJuQ2KBc9YY6-ALKDOPXySSiu38ygp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 8;
+}

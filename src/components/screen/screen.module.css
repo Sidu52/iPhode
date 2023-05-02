@@ -1,0 +1,30 @@
+.display{
+    border: 2px solid black;
+    position: absolute;
+    top: 7vh;
+    width: 275px;
+    height: 228px;
+    z-index: 5;
+    background-image: url(https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.menu_display{
+    background-color: #fff;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+}
+.heading{
+    margin-bottom: 10px;
+    padding:0 7px;
+}
+.menu p{
+    padding: 7px;
+}
+.active{
+    background-color: #416de9;
+    color: #ffffff;
+}

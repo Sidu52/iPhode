@@ -1,0 +1,47 @@
+
+.circlebox{
+    position: absolute;
+    top: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(109 112 119);
+    width: 250px;
+    height: 200px;
+}
+.circle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 192px;
+    background-color: white;
+    border-radius: 50%;
+}
+.menucircle{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(109 112 119);
+    border-radius: 50%;
+}
+.menubutton{
+    position: absolute;
+    top: 5px;
+    font-size: 25px;
+}
+.forwardbutton{
+    position: absolute;
+    right: 5px;
+    font-size: 25px;
+}
+.backwardbutton{
+    position: absolute;
+    left: 5px;
+    font-size: 25px;
+}
+.playpausebutton1{
+    position: absolute;
+    bottom: 5px;
+    font-size: 25px;
+}
