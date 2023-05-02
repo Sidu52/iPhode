@@ -7,8 +7,9 @@ text-align: center;
 border: 2px solid black;
 position: absolute;
 top: 7vh;
-width: 275px;
-height: 228px;
+width: 85%;
+height: 45%;
+border-radius: 2%;
 background: linear-gradient(200deg, rgb(20 20 20), rgb(4 122 87));
   
 `;

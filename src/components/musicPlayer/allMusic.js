@@ -5,8 +5,9 @@ const Display = styled.div`
     border: 2px solid black;
     position: absolute;
     top: 7vh;
-    width: 275px;
-    height: 228px;
+    width: 85%;
+    height: 45%;
+    border-radius: 2%;
     z-index: 5;
     background-color: white;
     overflow-y: scroll;

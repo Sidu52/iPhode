@@ -4,8 +4,9 @@ const Screen = styled.div`
     border: 2px solid black;
     position: absolute;
     top: 7vh;
-    width: 275px;
-    height: 228px;
+    width: 85%;
+    height: 38%;
+    border-radius: 2%;
     text-align:center;
     background-color:#fff;
     z-index: 8;
