@@ -73,7 +73,7 @@ export default class homebody extends Component {
                         }
                     }
 
-                    if (this.state.activePage === "Songs") {
+                   else if (this.state.activePage === "Songs") {
                         if (this.state.activeItem === "All Song") {
                             this.setState({
                                 activeItem: "Music"
@@ -88,6 +88,22 @@ export default class homebody extends Component {
                             })
                         }
                     }
+                    else if (this.state.activePage === "All Song") {
+                        
+                        if (this.state.activeItem < music.length) {
+                            this.setState({
+                                activeItem: this.state.activeItem +1
+                            })
+                        }else {
+                            // this.state.activeItem=0
+                            this.setState({
+                                activeItem:0
+                            })
+                        }
+                        
+                        
+                    }
+
 
                 }
             } else {
@@ -118,7 +134,7 @@ export default class homebody extends Component {
                             })
                         }
                     }
-                    if (this.state.activePage === "Songs") {
+                    else if (this.state.activePage === "Songs") {
                         if (this.state.activeItem === "All Song") {
                             this.setState({
                                 activeItem: "Artise"
@@ -133,6 +149,19 @@ export default class homebody extends Component {
                             })
                         }
                     }
+                    else if (this.state.activePage === "All Song") {
+                        //Active item 5 nhi ho raha if else condition chek karna hai kuch problem hai back jane me
+                        if (this.state.activeItem > 1) {
+                            this.setState({
+                                activeItem: this.state.activeItem -1
+                            })
+                        }else {
+                            // this.state.activeItem=music.length+1
+                            this.setState({
+                                activeItem:music.length+1
+                            })
+                        }              
+                    }
 
                 }
             }
@@ -141,7 +170,7 @@ export default class homebody extends Component {
     // Change On Screen 
 
     selectItem = () => {
-        const { activeItem } = this.state
+        const { activeItem, activePage } = this.state
         if (activeItem === "Songs") {
             this.setState({
                 activeItem: "All Song",
@@ -150,6 +179,20 @@ export default class homebody extends Component {
                     { heading: "My Music", data: ["All Song", "Music", "Artise"] }
                 ]
             });
+        }else if (activePage === "All Song"){
+            this.setState({
+                activePage: "Music",
+                musicdata: [{
+                    id: activeItem-1,
+                    song: music[activeItem-1].song,
+                    img: music[activeItem-1].img,
+                    title: music[activeItem-1].title
+                }
+                ]
+                
+            });
+        }else if(activePage ==="Music"){
+            return;
         }
         else {
             this.setState({
@@ -268,7 +311,7 @@ export default class homebody extends Component {
                 componentToRender = <Music musicList={musicList} musicdata={musicdata} playPause={playing} />;
                 break;
             case "All Song":
-                componentToRender = <Allmusic musicList={musicList} />;
+                componentToRender = <Allmusic musicList={musicList} activeItem={activeItem}/>;
                 break;
             default:
                 componentToRender = <Screen activeItem={activeItem} screendata={screendata} />;
@@ -284,6 +327,7 @@ export default class homebody extends Component {
                 prevTrack={this.prevTrack}
                 nextTrack={this.nextTrack}
                 playPause={this.playPause}
+                iconcha={playing}
                 />
             </div>
         )

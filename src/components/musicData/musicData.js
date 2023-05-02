@@ -32,7 +32,7 @@ export const music= [{
     song:Song4,
     img:Image4
   },{
-    id: 1,
+    id: 5,
     title: '05_-_Banjaara.mp3',
     song:Song5,
     img:Image5

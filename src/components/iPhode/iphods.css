@@ -29,19 +29,23 @@
     position: absolute;
     top: 5px;
     font-size: 25px;
+    cursor: pointer;
 }
 .forwardbutton{
     position: absolute;
     right: 5px;
     font-size: 25px;
+    cursor: pointer;
 }
 .backwardbutton{
     position: absolute;
     left: 5px;
     font-size: 25px;
+    cursor: pointer;
 }
 .playpausebutton1{
     position: absolute;
     bottom: 5px;
     font-size: 25px;
+    cursor: pointer;
 }

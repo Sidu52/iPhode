@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-
+import './music.css'
 const Display = styled.div`
     border: 2px solid black;
     position: absolute;
@@ -19,21 +19,21 @@ const ImgDiv =styled.div`
 const Img = styled.img`
     width: 40px;
     height: 40px;
-    padding-right: 15px;
+    padding: 6px 15px;
     border-radius: 50%;
 `
 export default class allMusic extends Component {
     render() {
-        const { musicList } = this.props;
+        const { musicList,activeItem } = this.props;
         return (
             <Display className='display'>
                 <ul>
                     {musicList.map((data) => {
-                        return (
-                            <li>
+                        return (  
+                            <li >
                                 <ImgDiv className="allsong-img">
                                     <Img src={data.img} alt="music img" />
-                                    <p>{data.title}</p>
+                                    <p className={activeItem===data.id?"actives":""}>{data.title}</p>
                                 </ImgDiv>
                             </li>
                         )
@@ -43,3 +43,11 @@ export default class allMusic extends Component {
         )
     }
 }
+
+
+// const styles = {
+//   active: {
+//     color: "#fff",
+//     background: "red",
+//   }
+// }

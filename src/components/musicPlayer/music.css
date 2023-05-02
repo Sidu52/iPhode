@@ -5,6 +5,7 @@
     width: 275px;
     height: 228px;
     z-index: 5;
+    background-color: white;
 }
   .music-bg img {
     width: 100%;
@@ -14,7 +15,7 @@
   
   .music-heading {
     position: relative;
-    top: -151px;
+    bottom: 0;
    
   }
   .button-controls {
@@ -99,4 +100,10 @@
     height: 5px;
     width: 100%;
     background-color: #333;
+  }
+
+  .actives{
+    background-color: #00000082;
+    color: #fff;
+    padding: 5px;
   }
