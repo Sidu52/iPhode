@@ -5,7 +5,7 @@ const Screen = styled.div`
     position: absolute;
     top: 7vh;
     width: 85%;
-    height: 38%;
+    height: 45%;
     border-radius: 2%;
     text-align:center;
     background-color:#fff;
